@@ -4,13 +4,13 @@ import connectDB from './config/db';
 import logger from './utils/logger';
 
 const PORT = parseInt(process.env.PORT || '5000', 10);
+const HOST = '0.0.0.0'; // CRITICAL — Railway requires 0.0.0.0, not localhost
 
 const start = async () => {
   await connectDB();
 
-  // Bind to 0.0.0.0 so Railway's proxy can reach the app
-  app.listen(PORT, '0.0.0.0', () => {
-    logger.info(`🚀 Umurava API running on http://0.0.0.0:${PORT}`);
+  app.listen(PORT, HOST, () => {
+    logger.info(`🚀 Umurava API running on http://${HOST}:${PORT}`);
     logger.info(`Environment: ${process.env.NODE_ENV || 'development'}`);
   });
 };

@@ -1,28 +1,40 @@
 'use client';
 import { useEffect, useState, useCallback } from 'react';
+import axios from 'axios';
 import { Candidate } from '@/types/candidate';
-import { getCandidates } from '@/lib/api';
 
 export function useCandidates(jobId: string) {
   const [candidates, setCandidates] = useState<Candidate[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const fetch = useCallback(async () => {
+  const fetchCandidates = useCallback(async () => {
     if (!jobId) return;
+
     setLoading(true);
+
     try {
-      const data = await getCandidates(jobId);
-      setCandidates(data);
+      const res = await axios.get(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/jobs/${jobId}/candidates`
+      );
+
+      setCandidates(res.data);
       setError(null);
-    } catch {
+    } catch (err) {
       setError('Failed to load candidates');
     } finally {
       setLoading(false);
     }
   }, [jobId]);
 
-  useEffect(() => { fetch(); }, [fetch]);
+  useEffect(() => {
+    fetchCandidates();
+  }, [fetchCandidates]);
 
-  return { candidates, loading, error, refetch: fetch };
+  return {
+    candidates,
+    loading,
+    error,
+    refetch: fetchCandidates,
+  };
 }

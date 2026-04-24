@@ -1,0 +1,202 @@
+[
+  {
+    "name": "Alice Nkurunziza",
+    "email": "alice.nkurunziza@example.com",
+    "phone": "+250788001001",
+    "skills": ["python", "machine learning", "tensorflow", "scikit-learn", "sql", "pandas"],
+    "experienceYears": 5,
+    "education": "Master",
+    "category": "Data Science",
+    "resumeText": "Experienced data scientist with 5 years building ML pipelines. Led a team of 3 at a Kigali fintech. Published two papers on NLP. Proficient in Python, TensorFlow, Scikit-learn, SQL, and Tableau. Delivered churn prediction model saving $200k annually."
+  },
+  {
+    "name": "Bob Mugisha",
+    "email": "bob.mugisha@example.com",
+    "phone": "+250788001002",
+    "skills": ["java", "spring boot", "microservices", "docker", "postgresql", "rest api"],
+    "experienceYears": 4,
+    "education": "Bachelor",
+    "category": "Java Developer",
+    "resumeText": "Java developer with 4 years of enterprise backend experience. Built microservices architecture for a logistics platform. Expert in Spring Boot, Docker, PostgreSQL and REST APIs. Contributed to open source Spring projects."
+  },
+  {
+    "name": "Claire Uwimana",
+    "email": "claire.uwimana@example.com",
+    "phone": "+250788001003",
+    "skills": ["python", "django", "fastapi", "postgresql", "redis", "docker"],
+    "experienceYears": 3,
+    "education": "Bachelor",
+    "category": "Python Developer",
+    "resumeText": "Python backend developer specializing in Django and FastAPI. Built REST APIs serving 50k+ daily users. Experience with Redis caching, Celery task queues, and PostgreSQL optimization. Strong TDD practice."
+  },
+  {
+    "name": "David Habimana",
+    "email": "david.habimana@example.com",
+    "phone": "+250788001004",
+    "skills": ["kubernetes", "docker", "terraform", "aws", "ci/cd", "linux", "ansible"],
+    "experienceYears": 6,
+    "education": "Bachelor",
+    "category": "DevOps Engineer",
+    "resumeText": "Senior DevOps engineer with 6 years of cloud infrastructure experience. Managed Kubernetes clusters on AWS EKS. Implemented GitOps with ArgoCD. Reduced deployment time by 70% through CI/CD automation with GitHub Actions."
+  },
+  {
+    "name": "Eve Mukamana",
+    "email": "eve.mukamana@example.com",
+    "phone": "+250788001005",
+    "skills": ["react", "nextjs", "typescript", "node", "mongodb", "graphql"],
+    "experienceYears": 4,
+    "education": "Bachelor",
+    "category": "Full Stack Developer",
+    "resumeText": "Full stack developer building modern web apps with React, Next.js, and Node.js. Delivered 8 production projects. Strong in TypeScript, MongoDB, GraphQL and REST APIs. Passionate about UI/UX and performance optimization."
+  },
+  {
+    "name": "Frank Bizimana",
+    "email": "frank.bizimana@example.com",
+    "phone": "+250788001006",
+    "skills": ["python", "deep learning", "pytorch", "nlp", "computer vision", "mlops"],
+    "experienceYears": 7,
+    "education": "PhD",
+    "category": "Data Science",
+    "resumeText": "AI researcher and ML engineer with PhD in Computer Vision. 7 years experience across academia and industry. Built production NLP systems processing 1M+ documents daily. Expert in PyTorch, MLflow, and Kubeflow."
+  },
+  {
+    "name": "Grace Iradukunda",
+    "email": "grace.iradukunda@example.com",
+    "phone": "+250788001007",
+    "skills": ["java", "kotlin", "android", "spring", "mysql", "git"],
+    "experienceYears": 2,
+    "education": "Bachelor",
+    "category": "Java Developer",
+    "resumeText": "Junior Java and Kotlin developer with 2 years experience in Android and backend development. Built a mobile payment app for local market. Familiar with Spring MVC, MySQL, and Agile workflows."
+  },
+  {
+    "name": "Henry Nsabimana",
+    "email": "henry.nsabimana@example.com",
+    "phone": "+250788001008",
+    "skills": ["python", "flask", "sql", "pandas", "matplotlib", "numpy"],
+    "experienceYears": 1,
+    "education": "Bachelor",
+    "category": "Python Developer",
+    "resumeText": "Entry-level Python developer fresh from Carnegie Mellon Africa. Built data visualization dashboards using Flask and Matplotlib. Completed 3 internship projects in data analytics. Eager to grow in backend development."
+  },
+  {
+    "name": "Irene Nyirahabimana",
+    "email": "irene.nyirahabimana@example.com",
+    "phone": "+250788001009",
+    "skills": ["aws", "gcp", "terraform", "docker", "monitoring", "linux"],
+    "experienceYears": 3,
+    "education": "Bachelor",
+    "category": "DevOps Engineer",
+    "resumeText": "Cloud engineer with 3 years on AWS and GCP. Set up monitoring stacks with Prometheus and Grafana. Managed infrastructure-as-code with Terraform. Holds AWS Solutions Architect Associate certification."
+  },
+  {
+    "name": "James Nzeyimana",
+    "email": "james.nzeyimana@example.com",
+    "phone": "+250788001010",
+    "skills": ["react", "vue", "javascript", "css", "node", "express", "mongodb"],
+    "experienceYears": 5,
+    "education": "Bachelor",
+    "category": "Full Stack Developer",
+    "resumeText": "Versatile full stack developer with 5 years experience across React and Vue frontends with Node/Express backends. Led frontend architecture for an e-commerce platform with 100k monthly users. Mentor to junior developers."
+  },
+  {
+    "name": "Keza Muhorakeye",
+    "email": "keza.muhorakeye@example.com",
+    "phone": "+250788001011",
+    "skills": ["python", "scikit-learn", "sql", "tableau", "data analysis", "r"],
+    "experienceYears": 2,
+    "education": "Master",
+    "category": "Data Science",
+    "resumeText": "Data analyst with Master's in Statistics transitioning to ML engineering. Strong foundation in statistical modeling, R, Python, and Tableau. Completed Coursera ML specialization. Looking to apply skills to real ML products."
+  },
+  {
+    "name": "Leon Hakizimana",
+    "email": "leon.hakizimana@example.com",
+    "phone": "+250788001012",
+    "skills": ["java", "spring boot", "kafka", "redis", "aws", "microservices"],
+    "experienceYears": 8,
+    "education": "Master",
+    "category": "Java Developer",
+    "resumeText": "Senior Java architect with 8 years building scalable distributed systems. Designed event-driven architectures using Kafka. Led migration from monolith to microservices for a bank processing 500k transactions/day. AWS Certified Developer."
+  },
+  {
+    "name": "Marie Uwitonze",
+    "email": "marie.uwitonze@example.com",
+    "phone": "+250788001013",
+    "skills": ["python", "airflow", "spark", "dbt", "snowflake", "data engineering"],
+    "experienceYears": 4,
+    "education": "Bachelor",
+    "category": "Data Science",
+    "resumeText": "Data engineer building robust pipelines for analytics teams. Expert in Apache Airflow, Spark, dbt, and Snowflake. Reduced data processing time by 60% through pipeline optimization. Built data warehouse serving 20+ analysts."
+  },
+  {
+    "name": "Nathan Sebuharara",
+    "email": "nathan.sebuharara@example.com",
+    "phone": "+250788001014",
+    "skills": ["nextjs", "react", "typescript", "tailwind", "prisma", "postgresql"],
+    "experienceYears": 3,
+    "education": "Bachelor",
+    "category": "Full Stack Developer",
+    "resumeText": "Modern web developer specializing in the Next.js ecosystem. Built SaaS products from zero to launch. Strong TypeScript skills, Prisma ORM, PostgreSQL. Freelanced for 5 international clients building B2B tools."
+  },
+  {
+    "name": "Olive Ineza",
+    "email": "olive.ineza@example.com",
+    "phone": "+250788001015",
+    "skills": ["python", "fastapi", "machine learning", "docker", "postgresql", "git"],
+    "experienceYears": 3,
+    "education": "Bachelor",
+    "category": "Python Developer",
+    "resumeText": "Python developer with experience in both ML and backend engineering. Built FastAPI services deploying scikit-learn models to production. Contributed to open-source ML tooling. Strong Docker and DevOps awareness."
+  },
+  {
+    "name": "Patrick Nkusi",
+    "email": "patrick.nkusi@example.com",
+    "phone": "+250788001016",
+    "skills": ["kubernetes", "helm", "gitlab ci", "prometheus", "grafana", "python"],
+    "experienceYears": 5,
+    "education": "Bachelor",
+    "category": "DevOps Engineer",
+    "resumeText": "Platform engineer with 5 years managing Kubernetes at scale. Implemented Helm charts for 30+ services. Built self-service developer platforms. Expert in observability stacks: Prometheus, Grafana, Loki, Tempo."
+  },
+  {
+    "name": "Queen Uwase",
+    "email": "queen.uwase@example.com",
+    "phone": "+250788001017",
+    "skills": ["react", "typescript", "figma", "css", "storybook", "accessibility"],
+    "experienceYears": 2,
+    "education": "Bachelor",
+    "category": "Full Stack Developer",
+    "resumeText": "Frontend-focused full stack developer with a design eye. Built component libraries in React with Storybook. WCAG 2.1 accessibility advocate. Transitioned from UX design, brings both design and code skills to the team."
+  },
+  {
+    "name": "Robert Gasana",
+    "email": "robert.gasana@example.com",
+    "phone": "+250788001018",
+    "skills": ["java", "spring", "junit", "sonarqube", "maven", "oracle"],
+    "experienceYears": 10,
+    "education": "Bachelor",
+    "category": "Java Developer",
+    "resumeText": "Veteran Java developer with 10 years in enterprise systems. Extensive experience with Spring Framework, Oracle DB, and large-scale legacy system modernization. Strong in code quality practices: TDD, SonarQube, code reviews."
+  },
+  {
+    "name": "Sandra Mukanziza",
+    "email": "sandra.mukanziza@example.com",
+    "phone": "+250788001019",
+    "skills": ["python", "tensorflow", "keras", "computer vision", "opencv", "mlops"],
+    "experienceYears": 4,
+    "education": "Master",
+    "category": "Data Science",
+    "resumeText": "Computer vision engineer building real-time detection systems. Deployed object detection models on edge devices. Strong TensorFlow and OpenCV skills. MSc in AI from UM6P. Won 2 Kaggle competitions in image classification."
+  },
+  {
+    "name": "Tom Bizumuremyi",
+    "email": "tom.bizumuremyi@example.com",
+    "phone": "+250788001020",
+    "skills": ["node", "express", "react", "aws", "mongodb", "websocket", "docker"],
+    "experienceYears": 6,
+    "education": "Bachelor",
+    "category": "Full Stack Developer",
+    "resumeText": "Senior full stack engineer with 6 years building real-time applications. Expert in Node.js, WebSockets, and event-driven architectures. Led backend for a live collaboration tool with 10k concurrent users. AWS Certified."
+  }
+]

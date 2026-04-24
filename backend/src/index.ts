@@ -8,8 +8,9 @@ const PORT = parseInt(process.env.PORT || '5000', 10);
 const start = async () => {
   await connectDB();
 
-  app.listen(PORT, () => {
-    logger.info(`🚀 Umurava API running on http://localhost:${PORT}`);
+  // Bind to 0.0.0.0 so Railway's proxy can reach the app
+  app.listen(PORT, '0.0.0.0', () => {
+    logger.info(`🚀 Umurava API running on http://0.0.0.0:${PORT}`);
     logger.info(`Environment: ${process.env.NODE_ENV || 'development'}`);
   });
 };

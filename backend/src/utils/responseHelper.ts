@@ -17,11 +17,11 @@ export const sendError = (
   res: Response,
   message = 'Internal Server Error',
   statusCode = 500,
-  errors?: unknown
+  errors?: Record<string, unknown> | string[] | null
 ) => {
   return res.status(statusCode).json({
     success: false,
     message,
-    ...(errors && { errors }),
+    ...(errors ? { errors } : {}),
   });
 };

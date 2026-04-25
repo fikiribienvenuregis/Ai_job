@@ -15,10 +15,13 @@ export function useCandidates(jobId: string) {
 
     try {
       const res = await axios.get(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/jobs/${jobId}/candidates`
+        // FIX: Use the correct endpoint with jobId as a query param
+        `${process.env.NEXT_PUBLIC_API_URL}/api/candidates`,
+        { params: { jobId } }
       );
 
-      setCandidates(res.data);
+      // FIX: Your backend wraps data in { data: [...] } via sendSuccess()
+      setCandidates(res.data.data ?? res.data);
       setError(null);
     } catch (err) {
       setError('Failed to load candidates');

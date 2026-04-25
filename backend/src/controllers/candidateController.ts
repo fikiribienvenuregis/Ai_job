@@ -1,5 +1,4 @@
 import { Request, Response, NextFunction } from 'express';
-import fs from 'fs';
 import * as candidateService from '../services/candidateService';
 import { parseCSV } from '../services/csvParserService';
 import { parsePDF } from '../services/pdfParserService';
@@ -28,19 +27,19 @@ export const uploadCSVOrJSON = async (req: Request, res: Response, next: NextFun
     let parsed: Awaited<ReturnType<typeof parseCSV>> = [];
 
     if (file.mimetype === 'application/json' || file.originalname.endsWith('.json')) {
-      const raw = fs.readFileSync(file.path, 'utf-8');
+      // file.buffer is available when using memoryStorage
+      const raw = file.buffer
+        ? file.buffer.toString('utf-8')
+        : require('fs').readFileSync(file.path, 'utf-8');
       const jsonData = JSON.parse(raw);
       parsed = Array.isArray(jsonData) ? jsonData : [jsonData];
     } else {
-      // CSV
-      parsed = await parseCSV(file.path);
+      // CSV — use file.path (diskStorage) or buffer
+      parsed = await parseCSV(file.path || '');
     }
 
     const docs = parsed.map((c) => ({ ...c, jobId }));
     const created = await candidateService.bulkCreateCandidates(docs);
-
-    // Clean up temp file
-    fs.unlinkSync(file.path);
 
     sendSuccess(res, { inserted: created.length }, `${created.length} candidates imported`, 201);
   } catch (err) {
@@ -74,7 +73,6 @@ export const uploadResumePDF = async (req: Request, res: Response, next: NextFun
           source: 'pdf',
         } as any);
         created.push(candidate);
-        fs.unlinkSync(file.path);
       } catch (fileErr) {
         logger.warn(`Failed to process PDF ${file.originalname}: ${fileErr}`);
       }

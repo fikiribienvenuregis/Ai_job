@@ -1,4 +1,3 @@
-import pdfParse from 'pdf-parse';
 import fs from 'fs';
 import logger from '../utils/logger';
 
@@ -22,11 +21,14 @@ const SKILL_KEYWORDS = [
 
 /**
  * Extract text and basic structured data from a PDF resume.
+ * Uses lazy import of pdf-parse to avoid startup crash on Railway.
  */
 export async function parsePDF(filePath: string): Promise<ParsedResume> {
   const dataBuffer = fs.readFileSync(filePath);
 
   try {
+    // Lazy import — prevents pdf-parse from crashing on module load
+    const pdfParse = (await import('pdf-parse')).default;
     const data = await pdfParse(dataBuffer);
     const text = data.text;
 
@@ -56,7 +58,6 @@ function extractPhone(text: string): string | undefined {
 }
 
 function extractName(text: string): string {
-  // Take the first non-empty line as the name (heuristic)
   const lines = text.split('\n').map((l) => l.trim()).filter(Boolean);
   return lines[0] || 'Unknown';
 }

@@ -2,7 +2,8 @@ import multer from 'multer';
 import path from 'path';
 import fs from 'fs';
 
-const UPLOAD_DIR = path.join(__dirname, '../../uploads');
+// Use /tmp for Railway (always available, even on ephemeral filesystems)
+const UPLOAD_DIR = '/tmp/uploads';
 if (!fs.existsSync(UPLOAD_DIR)) fs.mkdirSync(UPLOAD_DIR, { recursive: true });
 
 const storage = multer.diskStorage({
@@ -28,11 +29,11 @@ const pdfFilter: multer.Options['fileFilter'] = (_req, file, cb) => {
 export const uploadCSVJSON = multer({
   storage,
   fileFilter: csvJsonFilter,
-  limits: { fileSize: 10 * 1024 * 1024 }, // 10MB
+  limits: { fileSize: 10 * 1024 * 1024 },
 }).single('file');
 
 export const uploadPDFs = multer({
   storage,
   fileFilter: pdfFilter,
-  limits: { fileSize: 5 * 1024 * 1024 }, // 5MB per file
+  limits: { fileSize: 5 * 1024 * 1024 },
 }).array('resumes', 20);

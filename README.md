@@ -1,4 +1,4 @@
-# Umurava AI — Recruitment Screening System
+# Cv_Screening_AI — Recruitment Screening System
 
 An AI-powered recruitment screening platform that uses **Google Gemini 1.5 Flash** to evaluate and rank candidates against job requirements.
 
@@ -173,4 +173,4 @@ yeah man
 ## License
 
 MIT — Built for Umurava by the engineering team.
-echo " " >> frontend/README.md
+log updeted

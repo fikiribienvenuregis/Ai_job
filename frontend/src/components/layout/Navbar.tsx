@@ -19,7 +19,7 @@ export default function Navbar() {
           <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center">
             <BrainCircuit className="w-5 h-5 text-white" />
           </div>
-          <span className="text-lg">Umurava<span className="text-brand-600">AI</span></span>
+          <span className="text-lg">CV_Screening<span className="text-brand-600">AI</span></span>
         </Link>
 
         {/* Nav */}

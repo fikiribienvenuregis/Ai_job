@@ -5,31 +5,8 @@ import { errorHandler } from './middleware/errorHandler';
 
 const app = express();
 
-// Allow multiple origins — Vercel preview URLs + production
-const allowedOrigins = [
-  process.env.FRONTEND_URL,
-  'https://jo-cv-screening.vercel.app',
-  'http://localhost:3000',
-].filter(Boolean) as string[];
-
-app.use(cors({
-  origin: (origin, callback) => {
-    // Allow requests with no origin (mobile apps, curl, Postman)
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.some(o => origin.startsWith(o))) {
-      return callback(null, true);
-    }
-    // Also allow any vercel.app preview URL for this project
-    if (origin.includes('jo-cv-screening') && origin.includes('vercel.app')) {
-      return callback(null, true);
-    }
-    callback(new Error(`CORS: origin ${origin} not allowed`));
-  },
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-}));
-
+// Open CORS — allows all origins (safe for now, lock down later)
+app.use(cors());
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 
@@ -41,7 +18,7 @@ app.get('/health', (_req, res) => {
 // API routes
 app.use('/api', routes);
 
-// 404
+// 404 handler
 app.use((_req, res) => {
   res.status(404).json({ success: false, message: 'Route not found' });
 });

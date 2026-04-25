@@ -173,3 +173,4 @@ yeah man
 ## License
 
 MIT — Built for Umurava by the engineering team.
+echo " " >> frontend/README.md
